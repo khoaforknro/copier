@@ -1,21 +1,17 @@
-*{margin:0;padding:0;box-sizing:border-box}
-body{background:#0a0a0a;color:#eee;font-family:'Segoe UI',sans-serif}
-nav{background:#000;padding:20px;text-align:center;position:fixed;width:100%;top:0;z-index:1000;box-shadow:0 5px 20px rgba(0,212,255,.4)}
-nav a{color:#00d4ff;margin:0 25px;text-decoration:none;font-weight:bold;font-size:1.1em}
-nav a:hover{color:#ff6ec7}
-section{padding:100px 20px 60px;text-align:center}
-h1{font-size:4em;background:linear-gradient(90deg,#00d4ff,#ff6ec7);-webkit-background-clip:text;color:transparent}
-h2{font-size:2.8em;color:#00d4ff;margin:40px 0}
-.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:30px;padding:20px}
-.item{overflow:hidden;border-radius:20px;cursor:pointer;box-shadow:0 12px 40px rgba(0,212,255,.3);transition:.5s}
-.item:hover{transform:translateY(-15px) scale(1.04)}
-.item img{width:100%;object-fit:cover;transition:.5s}
-.item:hover img{transform:scale(1.15)}
-.lightbox{display:none;position:fixed;z-index:9999;inset:0;background:rgba(0,0,0,.97);justify-content:center;align-items:center;padding:20px}
-.lightbox.active{display:flex}
-#lb-img{max-width:75%;max-height:88vh;border-radius:20px;box-shadow:0 0 80px #00d4ff}
-.close{position:absolute;top:20px;right:40px;font-size:70px;color:#fff;cursor:pointer}
-.info{position:absolute;right:20px;top:20px;width:380px;background:rgba(15,15,15,.95);padding:30px;border-radius:20px;max-height:90vh;overflow-y:auto}
-.info h3{color:#ff6ec7}
-.card{background:#111;padding:35px;border-radius:20px;margin:20px auto;max-width:800px;box-shadow:0 10px 40px #000}
-@media(max-width:768px){.gallery{grid-template-columns:1fr 1fr}h1{font-size:2.8em}.info{position:static;width:94%;margin:20px auto}}
+body { margin:0; font-family:Arial, sans-serif; background:#f9f9f9; color:#333; }
+header { background:#111; color:#fff; padding:15px; display:flex; justify-content:space-between; align-items:center; }
+header nav a { color:#fff; margin:0 10px; text-decoration:none; transition:color .3s; }
+header nav a:hover { color:#f3a952; }
+.hero { height:80vh; background:url('../img/hero.jpg') center/cover no-repeat; display:flex; flex-direction:column; justify-content:center; align-items:center; color:#fff; text-align:center; }
+.hero h1 { font-size:48px; text-shadow:2px 2px 6px rgba(0,0,0,0.6); }
+section { padding:60px 20px; max-width:1100px; margin:auto; }
+h2 { text-align:center; margin-bottom:30px; }
+.gallery { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; }
+.gallery img { width:100%; border-radius:10px; transition:transform .3s; }
+.gallery img:hover { transform:scale(1.05); }
+.rules { list-style:none; padding:0; display:grid; gap:15px; }
+.rules li { background:#fff; padding:15px; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.1); }
+.pricing { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; }
+.price-card { background:#fff; padding:20px; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.1); text-align:center; }
+.price-card .amount { font-size:22px; color:#f3a952; margin-top:10px; }
+footer { background:#111; color:#fff; text-align:center; padding:15px; }
